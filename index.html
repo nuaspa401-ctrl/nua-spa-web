@@ -527,7 +527,7 @@
       }
     }
 </style>
-</head>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head>
 <body>
 <section class="hero" id="inicio">
 <div class="hero-bg"></div>
@@ -862,5 +862,22 @@
     console.warn('No se pudo cargar el contenido editable.', error);
   }
 })();
-</script></body>
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.netlifyIdentity) return;
+
+  window.netlifyIdentity.on("init", function (user) {
+    const hash = window.location.hash || "";
+    if (user && (hash.includes("invite_token") || hash.includes("confirmation_token") || hash.includes("recovery_token"))) {
+      window.location.href = "/admin/";
+    }
+  });
+
+  window.netlifyIdentity.on("login", function () {
+    window.location.href = "/admin/";
+  });
+});
+</script>
+</body>
 </html>
