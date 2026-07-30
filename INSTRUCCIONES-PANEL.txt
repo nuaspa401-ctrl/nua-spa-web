@@ -1,0 +1,15 @@
+NÜA SPA — PANEL DE EDICIÓN
+
+Este paquete agrega:
+- /admin para editar el sitio.
+- Cambio de logo.
+- Cambio de imagen y color de fondo.
+- Edición de fotografías, nombres, precios y duración de servicios.
+- Opción para mostrar u ocultar servicios.
+- Guardado en GitHub y publicación automática mediante Netlify.
+
+Después de subir estos archivos a GitHub:
+1. En Netlify activa Identity.
+2. Activa Git Gateway.
+3. Invita a la persona encargada.
+4. Entra a https://nuaoficcial.netlify.app/admin/

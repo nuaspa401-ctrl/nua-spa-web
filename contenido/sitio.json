@@ -1,0 +1,253 @@
+{
+  "sitio": {
+    "nombre": "Nüa Spa",
+    "logo": "assets/logo/nua-logo-azul.png",
+    "imagen_fondo": "",
+    "color_fondo": "#f3efe8",
+    "color_principal": "#5b8fa8",
+    "texto_bienvenida": "Bienvenida a Nüa Spa",
+    "whatsapp": "",
+    "instagram": "",
+    "facebook": ""
+  },
+  "servicios": [
+    {
+      "nombre": "Facial Esencial",
+      "duracion": "50 – 60 min",
+      "precio": "$550",
+      "imagen": "assets/servicios/facial-esencial.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial de Limpieza Profunda",
+      "duracion": "60 – 75 min",
+      "precio": "$650",
+      "imagen": "assets/servicios/facial-de-limpieza-profunda.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial Calmante",
+      "duracion": "60 min",
+      "precio": "$600",
+      "imagen": "assets/servicios/facial-calmante.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial Revitalizante",
+      "duracion": "60 min",
+      "precio": "$600",
+      "imagen": "assets/servicios/facial-revitalizante.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial Hidratante",
+      "duracion": "60 min",
+      "precio": "$600",
+      "imagen": "assets/servicios/facial-hidratante.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial Despigmentante",
+      "duracion": "60 min",
+      "precio": "$600",
+      "imagen": "assets/servicios/facial-despigmentante.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial Anti-edad",
+      "duracion": "60 min",
+      "precio": "$600",
+      "imagen": "assets/servicios/facial-anti-edad.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial Control Acné",
+      "duracion": "60 – 75 min",
+      "precio": "$650",
+      "imagen": "assets/servicios/facial-control-acne.png",
+      "visible": true
+    },
+    {
+      "nombre": "Facial de Micropunción (Dermapen)",
+      "duracion": "60 – 75 min",
+      "precio": "$850",
+      "imagen": "assets/servicios/facial-de-micropuncion-dermapen.png",
+      "visible": true
+    },
+    {
+      "nombre": "Micropunción en Labios",
+      "duracion": "10 – 15 min",
+      "precio": "$250",
+      "imagen": "assets/servicios/micropuncion-en-labios.png",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje Relajante",
+      "duracion": "",
+      "precio": "",
+      "imagen": "assets/servicios/masaje-relajante.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje Sueco",
+      "duracion": "",
+      "precio": "",
+      "imagen": "assets/servicios/masaje-sueco.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje de Tejido Profundo",
+      "duracion": "60 min",
+      "precio": "$700",
+      "imagen": "assets/servicios/masaje-de-tejido-profundo.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje para Piernas Cansadas",
+      "duracion": "45 min",
+      "precio": "$500",
+      "imagen": "assets/servicios/masaje-para-piernas-cansadas.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje de Espalda Profunda",
+      "duracion": "45 min",
+      "precio": "$500",
+      "imagen": "assets/servicios/masaje-de-espalda-profunda.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Reflexología Podal",
+      "duracion": "45 min",
+      "precio": "$500",
+      "imagen": "assets/servicios/reflexologia-podal.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje con Piedras Calientes",
+      "duracion": "75 min",
+      "precio": "$750",
+      "imagen": "assets/servicios/masaje-con-piedras-calientes.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje con Piedras Frías",
+      "duracion": "75 min",
+      "precio": "$750",
+      "imagen": "assets/servicios/masaje-con-piedras-frias.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje de Choque Térmico",
+      "duracion": "75 min",
+      "precio": "$750",
+      "imagen": "assets/servicios/masaje-de-choque-termico.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje con Ventosas",
+      "duracion": "75 min",
+      "precio": "$750",
+      "imagen": "assets/servicios/masaje-con-ventosas.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje con Bambú",
+      "duracion": "60 min",
+      "precio": "$650",
+      "imagen": "assets/servicios/masaje-con-bambu.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje con Pindas Aromáticas",
+      "duracion": "",
+      "precio": "",
+      "imagen": "assets/servicios/masaje-con-pindas-aromaticas.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje de Drenaje Linfático",
+      "duracion": "60 min",
+      "precio": "$700",
+      "imagen": "assets/servicios/masaje-de-drenaje-linfatico.jpg",
+      "visible": true
+    },
+    {
+      "nombre": "Masaje Reductivo",
+      "duracion": "60 min",
+      "precio": "$700",
+      "imagen": "assets/servicios/masaje-reductivo.png",
+      "visible": true
+    },
+    {
+      "nombre": "Baño de Vapor",
+      "duracion": "45 – 60 min",
+      "precio": "$500",
+      "imagen": "assets/servicios/bano-de-vapor.png",
+      "visible": true
+    },
+    {
+      "nombre": "Sauna",
+      "duracion": "45 – 60 min",
+      "precio": "$500",
+      "imagen": "assets/servicios/sauna.png",
+      "visible": true
+    },
+    {
+      "nombre": "Tinas de Hidromasaje",
+      "duracion": "45 – 60 min",
+      "precio": "$500",
+      "imagen": "assets/servicios/tinas-de-hidromasaje.png",
+      "visible": true
+    },
+    {
+      "nombre": "Tina de Inmersión en Frío",
+      "duracion": "Consultar",
+      "precio": "—",
+      "imagen": "assets/servicios/tina-de-inmersion-en-frio.png",
+      "visible": true
+    },
+    {
+      "nombre": "Circuito de Contraste",
+      "duracion": "Consultar",
+      "precio": "—",
+      "imagen": "assets/servicios/circuito-de-contraste.png",
+      "visible": true
+    },
+    {
+      "nombre": "Circuito Calmante",
+      "duracion": "60 min",
+      "precio": "$750",
+      "imagen": "assets/servicios/circuito-calmante.png",
+      "visible": true
+    },
+    {
+      "nombre": "Circuito de Reactivación",
+      "duracion": "45 – 60 min",
+      "precio": "$650",
+      "imagen": "assets/servicios/circuito-de-reactivacion.png",
+      "visible": true
+    },
+    {
+      "nombre": "Circuito Integral Nüa",
+      "duracion": "Consultar",
+      "precio": "—",
+      "imagen": "assets/servicios/circuito-integral-nua.png",
+      "visible": true
+    },
+    {
+      "nombre": "Experiencias Personalizadas",
+      "duracion": "Duración personalizada",
+      "precio": "Cotizar",
+      "imagen": "assets/servicios/experiencias-personalizadas.png",
+      "visible": true
+    },
+    {
+      "nombre": "Experiencia Nüa",
+      "duracion": "Duración personalizada",
+      "precio": "Cotizar",
+      "imagen": "assets/servicios/experiencia-nua.png",
+      "visible": true
+    }
+  ]
+}

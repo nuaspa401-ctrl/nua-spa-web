@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: es
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "configuracion"
+    label: "Página principal"
+    files:
+      - name: "sitio"
+        label: "Contenido de Nüa Spa"
+        file: "contenido/sitio.json"
+        format: "json"
+        fields:
+          - label: "Configuración general"
+            name: "sitio"
+            widget: "object"
+            fields:
+              - { label: "Nombre del negocio", name: "nombre", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Imagen de fondo", name: "imagen_fondo", widget: "image", required: false }
+              - { label: "Color de fondo", name: "color_fondo", widget: "color" }
+              - { label: "Color principal", name: "color_principal", widget: "color" }
+              - { label: "Texto de bienvenida", name: "texto_bienvenida", widget: "string", required: false }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+
+          - label: "Servicios"
+            name: "servicios"
+            widget: "list"
+            summary: "{{fields.nombre}} — {{fields.precio}}"
+            fields:
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { label: "Duración", name: "duracion", widget: "string", required: false }
+              - { label: "Precio", name: "precio", widget: "string", required: false }
+              - { label: "Fotografía", name: "imagen", widget: "image" }
+              - { label: "Mostrar servicio", name: "visible", widget: "boolean", default: true }
