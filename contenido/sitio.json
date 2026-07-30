@@ -1,20 +1,20 @@
 {
   "sitio": {
+    "imagen_fondo": "",
+    "facebook": "",
     "nombre": "Nüa Spa",
     "logo": "assets/logo/nua-logo-azul.png",
-    "imagen_fondo": "",
-    "color_fondo": "#f3efe8",
-    "color_principal": "#5b8fa8",
-    "texto_bienvenida": "Bienvenida a Nüa Spa",
     "whatsapp": "",
+    "color_principal": "#5b8fa8",
     "instagram": "",
-    "facebook": ""
+    "color_fondo": "#f3efe8",
+    "texto_bienvenida": "Bienvenida a Nüa Spa"
   },
   "servicios": [
     {
       "nombre": "Facial Esencial",
       "duracion": "50 – 60 min",
-      "precio": "$550",
+      "precio": "$600",
       "imagen": "assets/servicios/facial-esencial.png",
       "visible": true
     },
