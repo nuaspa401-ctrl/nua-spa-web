@@ -1,0 +1,15 @@
+NÜA SPA — VERSIÓN CORREGIDA FINAL
+
+- Logo azul proporcionado, colocado en la parte superior.
+- 34 tarjetas y 34 imágenes existentes.
+- Facial Esencial y Facial de Limpieza Profunda corregidos.
+- Páginas introductorias excluidas:
+  Índice, Faciales, Masajes, Hidroterapia, Circuitos y Experiencias.
+- Todas las fichas individuales del DOCX están en su sección correcta.
+- Se añadieron Experiencias Personalizadas y Experiencia Nüa.
+- Para los masajes sin ficha individual se usó una tarjeta neutra de marca,
+  sin reutilizar imágenes de otros servicios.
+
+Para publicar:
+1. Descomprime el ZIP.
+2. Arrastra la carpeta completa a Netlify.

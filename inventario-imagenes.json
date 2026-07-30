@@ -1,0 +1,210 @@
+{
+  "total_tarjetas": 34,
+  "tarjetas_con_imagen_existente": 34,
+  "tarjetas_con_error": [],
+  "imagenes_intro_excluidas": {
+    "image1.jpeg": "Portada del documento",
+    "image2.png": "Índice general",
+    "image3.png": "Introducción de Faciales",
+    "image14.png": "Introducción de Masajes",
+    "image16.png": "Introducción de Hidroterapia",
+    "image21.png": "Introducción de Circuitos",
+    "image26.png": "Introducción de Experiencias"
+  },
+  "fichas_reales_asignadas": {
+    "Facial Esencial": "image4.png",
+    "Facial de Limpieza Profunda": "image5.png",
+    "Facial Calmante": "image6.png",
+    "Facial Revitalizante": "image7.png",
+    "Facial Hidratante": "image8.png",
+    "Facial Despigmentante": "image9.png",
+    "Facial Anti-edad": "image10.png",
+    "Facial Control Acné": "image11.png",
+    "Facial de Micropunción (Dermapen)": "image12.png",
+    "Micropunción en Labios": "image13.png",
+    "Masaje Reductivo": "image15.png",
+    "Baño de Vapor": "image17.png",
+    "Sauna": "image18.png",
+    "Tinas de Hidromasaje": "image19.png",
+    "Tina de Inmersión en Frío": "image20.png",
+    "Circuito de Contraste": "image22.png",
+    "Circuito Calmante": "image23.png",
+    "Circuito de Reactivación": "image24.png",
+    "Circuito Integral Nüa": "image25.png",
+    "Experiencias Personalizadas": "image27.png",
+    "Experiencia Nüa": "image28.png"
+  },
+  "nota_masajes": "El DOCX contiene ficha individual únicamente para Masaje Reductivo. Los otros trece masajes usan una ficha genérica de marca con su nombre correcto; no se reutilizó ninguna ficha de otro servicio.",
+  "tarjetas": [
+    {
+      "servicio": "Facial Esencial",
+      "imagen": "assets/servicios/facial-esencial.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial de Limpieza Profunda",
+      "imagen": "assets/servicios/facial-de-limpieza-profunda.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial Calmante",
+      "imagen": "assets/servicios/facial-calmante.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial Revitalizante",
+      "imagen": "assets/servicios/facial-revitalizante.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial Hidratante",
+      "imagen": "assets/servicios/facial-hidratante.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial Despigmentante",
+      "imagen": "assets/servicios/facial-despigmentante.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial Anti-edad",
+      "imagen": "assets/servicios/facial-anti-edad.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial Control Acné",
+      "imagen": "assets/servicios/facial-control-acne.png",
+      "existe": true
+    },
+    {
+      "servicio": "Facial de Micropunción (Dermapen)",
+      "imagen": "assets/servicios/facial-de-micropuncion-dermapen.png",
+      "existe": true
+    },
+    {
+      "servicio": "Micropunción en Labios",
+      "imagen": "assets/servicios/micropuncion-en-labios.png",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje Relajante",
+      "imagen": "assets/servicios/masaje-relajante.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje Sueco",
+      "imagen": "assets/servicios/masaje-sueco.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje de Tejido Profundo",
+      "imagen": "assets/servicios/masaje-de-tejido-profundo.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje para Piernas Cansadas",
+      "imagen": "assets/servicios/masaje-para-piernas-cansadas.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje de Espalda Profunda",
+      "imagen": "assets/servicios/masaje-de-espalda-profunda.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Reflexología Podal",
+      "imagen": "assets/servicios/reflexologia-podal.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje con Piedras Calientes",
+      "imagen": "assets/servicios/masaje-con-piedras-calientes.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje con Piedras Frías",
+      "imagen": "assets/servicios/masaje-con-piedras-frias.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje de Choque Térmico",
+      "imagen": "assets/servicios/masaje-de-choque-termico.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje con Ventosas",
+      "imagen": "assets/servicios/masaje-con-ventosas.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje con Bambú",
+      "imagen": "assets/servicios/masaje-con-bambu.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje con Pindas Aromáticas",
+      "imagen": "assets/servicios/masaje-con-pindas-aromaticas.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje de Drenaje Linfático",
+      "imagen": "assets/servicios/masaje-de-drenaje-linfatico.jpg",
+      "existe": true
+    },
+    {
+      "servicio": "Masaje Reductivo",
+      "imagen": "assets/servicios/masaje-reductivo.png",
+      "existe": true
+    },
+    {
+      "servicio": "Baño de Vapor",
+      "imagen": "assets/servicios/bano-de-vapor.png",
+      "existe": true
+    },
+    {
+      "servicio": "Sauna",
+      "imagen": "assets/servicios/sauna.png",
+      "existe": true
+    },
+    {
+      "servicio": "Tinas de Hidromasaje",
+      "imagen": "assets/servicios/tinas-de-hidromasaje.png",
+      "existe": true
+    },
+    {
+      "servicio": "Tina de Inmersión en Frío",
+      "imagen": "assets/servicios/tina-de-inmersion-en-frio.png",
+      "existe": true
+    },
+    {
+      "servicio": "Circuito de Contraste",
+      "imagen": "assets/servicios/circuito-de-contraste.png",
+      "existe": true
+    },
+    {
+      "servicio": "Circuito Calmante",
+      "imagen": "assets/servicios/circuito-calmante.png",
+      "existe": true
+    },
+    {
+      "servicio": "Circuito de Reactivación",
+      "imagen": "assets/servicios/circuito-de-reactivacion.png",
+      "existe": true
+    },
+    {
+      "servicio": "Circuito Integral Nüa",
+      "imagen": "assets/servicios/circuito-integral-nua.png",
+      "existe": true
+    },
+    {
+      "servicio": "Experiencias Personalizadas",
+      "imagen": "assets/servicios/experiencias-personalizadas.png",
+      "existe": true
+    },
+    {
+      "servicio": "Experiencia Nüa",
+      "imagen": "assets/servicios/experiencia-nua.png",
+      "existe": true
+    }
+  ]
+}
