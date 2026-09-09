@@ -46,7 +46,7 @@ collections:
             summary: "{{fields.titulo}}"
             hint: "Agrega una promoción y sube su imagen. Puedes arrastrarlas para cambiar el orden; la página mostrará exactamente ese orden."
             fields:
-              - { label: "Imagen de la promoción", name: "imagen", widget: "image", required: false, hint: "Recomendado: diseño vertical, como las promociones de la página anterior." }
+              - { label: "FOTO / DISEÑO DE LA PROMOCIÓN", name: "imagen", widget: "image", required: false, hint: "Aquí puedes subir la imagen de la promoción del mes desde tu computadora. Recomendado: 1080×1350 px o 1080×1920 px, formato vertical." }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "text", required: false }
               - { label: "Texto del botón", name: "boton", widget: "string", required: false }

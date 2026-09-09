@@ -380,6 +380,123 @@
       transform: scale(1.04);
     }
 
+
+    /* ── COTIZACIÓN ── */
+    .quote-section {
+      padding: clamp(4rem, 8vw, 7rem) 1.25rem;
+      background: linear-gradient(180deg, var(--cream) 0%, rgba(91,143,168,.10) 100%);
+    }
+    .quote-card {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: clamp(1.6rem, 4vw, 3rem);
+      border: 1px solid rgba(91,143,168,.22);
+      border-radius: 28px;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 22px 60px rgba(53,78,90,.10);
+    }
+    .quote-eyebrow {
+      display: block;
+      text-align: center;
+      margin-bottom: .65rem;
+      color: var(--nua-blue);
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .quote-card h2 {
+      margin: 0;
+      text-align: center;
+      font-family: 'Marcellus', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: var(--nua-dark);
+    }
+    .quote-intro {
+      max-width: 590px;
+      margin: .85rem auto 2rem;
+      text-align: center;
+      color: #656565;
+      line-height: 1.65;
+      font-size: .95rem;
+    }
+    .quote-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .quote-field { display: flex; flex-direction: column; gap: .45rem; }
+    .quote-field.full { grid-column: 1 / -1; }
+    .quote-field label {
+      color: #4f5960;
+      font-size: .76rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .quote-field input,
+    .quote-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid rgba(91,143,168,.30);
+      border-radius: 14px;
+      background: rgba(255,255,255,.92);
+      padding: .9rem 1rem;
+      color: #30373b;
+      font: inherit;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .quote-field textarea { min-height: 120px; resize: vertical; }
+    .quote-field input:focus,
+    .quote-field textarea:focus {
+      border-color: var(--nua-blue);
+      box-shadow: 0 0 0 3px rgba(91,143,168,.12);
+    }
+    .quote-submit {
+      grid-column: 1 / -1;
+      justify-self: center;
+      min-width: min(100%, 280px);
+      border: 0;
+      border-radius: 999px;
+      padding: .95rem 1.5rem;
+      background: var(--nua-blue);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform .2s, opacity .2s;
+    }
+    .quote-submit:hover { transform: translateY(-2px); }
+    .quote-submit:disabled { opacity: .55; cursor: wait; transform: none; }
+    .quote-status {
+      grid-column: 1 / -1;
+      margin: 0;
+      text-align: center;
+      min-height: 1.4em;
+      font-size: .86rem;
+      color: #4f6f5b;
+    }
+    .back-to-top.quote-cta {
+      border: 1px solid var(--nua-blue);
+      border-radius: 999px;
+      padding: .75rem 1.4rem;
+      letter-spacing: .14em;
+      transition: background .2s, color .2s, transform .2s;
+    }
+    .back-to-top.quote-cta:hover {
+      background: var(--nua-blue);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 640px) {
+      .quote-form { grid-template-columns: 1fr; }
+      .quote-field.full, .quote-submit, .quote-status { grid-column: 1; }
+      .quote-card { border-radius: 22px; }
+    }
+
     /* ── LIGHTBOX ── */
     #lightbox-overlay {
       display: none;
@@ -1143,25 +1260,71 @@
     especializadas previa valoración profesional. Para reservar tu cita o resolver dudas,
     escríbenos por WhatsApp al 744 105 4559.
   </p>
-<a class="back-to-top" href="#inicio">Volver al inicio</a>
+<a class="back-to-top quote-cta" href="#cotizar">Quiero cotizar</a>
 </section>
+
+<!-- ══════════════ COTIZACIÓN ══════════════ -->
+<section class="quote-section" id="cotizar" aria-labelledby="cotizar-titulo">
+  <div class="quote-card">
+    <span class="quote-eyebrow">Nüa Spa</span>
+    <h2 id="cotizar-titulo">Quiero cotizar</h2>
+    <p class="quote-intro">Cuéntanos qué servicio o experiencia te interesa. Déjanos tus datos y nos pondremos en contacto contigo para orientarte y preparar tu cotización.</p>
+    <form class="quote-form" id="quote-form" name="cotizacion-nua" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="cotizacion-nua" />
+      <p hidden><label>No llenar: <input name="bot-field" /></label></p>
+      <div class="quote-field">
+        <label for="quote-name">Nombre</label>
+        <input id="quote-name" name="nombre" type="text" autocomplete="name" required />
+      </div>
+      <div class="quote-field">
+        <label for="quote-phone">WhatsApp / teléfono</label>
+        <input id="quote-phone" name="telefono" type="tel" autocomplete="tel" required />
+      </div>
+      <div class="quote-field full">
+        <label for="quote-service">Servicio o experiencia de interés</label>
+        <input id="quote-service" name="servicio" type="text" placeholder="Ej. Facial Esencial, Circuito Integral Nüa..." />
+      </div>
+      <div class="quote-field full">
+        <label for="quote-message">¿Qué te gustaría cotizar?</label>
+        <textarea id="quote-message" name="mensaje" placeholder="Cuéntanos qué buscas, para cuántas personas o cualquier detalle que debamos considerar."></textarea>
+      </div>
+      <button class="quote-submit" type="submit">Solicitar cotización</button>
+      <p class="quote-status" id="quote-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
 <footer class="site-footer">© 2026 Nüa Spa · Todos los derechos reservados</footer>
 <!-- LIGHTBOX -->
 <div aria-label="Vista del servicio" aria-modal="true" id="lightbox-overlay" role="dialog">
 <img alt="" id="lightbox-img" src=""/>
 <div class="lb-actions">
-<a class="lb-btn lb-home" href="#inicio" onclick="closeLightbox()">⌂ Volver al inicio</a>
+<a class="lb-btn lb-home" href="#cotizar" onclick="goToQuoteFromLightbox(event)">Quiero cotizar</a>
 <button class="lb-btn lb-close" onclick="closeLightbox()">✕ Cerrar</button>
 </div>
 </div>
 <script>
+  var currentQuoteService = '';
   function openLightbox(el) {
     var img = el.querySelector('img');
     if (!img) return;
+    currentQuoteService = img.alt || '';
     document.getElementById('lightbox-img').src = img.src;
     document.getElementById('lightbox-img').alt = img.alt;
     document.getElementById('lightbox-overlay').classList.add('active');
     document.body.style.overflow = 'hidden';
+  }
+  function goToQuoteFromLightbox(event) {
+    if (event) event.preventDefault();
+    closeLightbox();
+    var serviceField = document.getElementById('quote-service');
+    if (serviceField && currentQuoteService) serviceField.value = currentQuoteService;
+    var quoteSection = document.getElementById('cotizar');
+    if (quoteSection) quoteSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.setTimeout(function () {
+      var nameField = document.getElementById('quote-name');
+      if (nameField) nameField.focus({ preventScroll: true });
+    }, 500);
   }
   function closeLightbox() {
     document.getElementById('lightbox-overlay').classList.remove('active');
@@ -1175,6 +1338,36 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
   });
+</script>
+<script>
+  (function () {
+    var form = document.getElementById('quote-form');
+    if (!form) return;
+    var status = document.getElementById('quote-status');
+    var submit = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (status) status.textContent = 'Enviando tu solicitud…';
+      if (submit) submit.disabled = true;
+      try {
+        var formData = new FormData(form);
+        var body = new URLSearchParams();
+        formData.forEach(function (value, key) { body.append(key, value); });
+        var response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString()
+        });
+        if (!response.ok) throw new Error('No se pudo enviar');
+        form.reset();
+        if (status) status.textContent = '¡Gracias! Recibimos tu solicitud. Nüa se pondrá en contacto contigo.';
+      } catch (error) {
+        if (status) status.textContent = 'No pudimos enviar el formulario. También puedes escribirnos por WhatsApp al 744 105 4559.';
+      } finally {
+        if (submit) submit.disabled = false;
+      }
+    });
+  })();
 </script>
 <script>
 (async function () {
