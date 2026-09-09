@@ -40,13 +40,14 @@ collections:
               - { label: "Fotografía", name: "imagen", widget: "image" }
               - { label: "Mostrar servicio", name: "visible", widget: "boolean", default: true }
 
-          - label: "Promociones"
+          - label: "Promociones del mes"
             name: "promociones"
             widget: "list"
             summary: "{{fields.titulo}}"
-            hint: "Agrega una promoción y sube su imagen. Puedes arrastrarlas para cambiar el orden; la página mostrará exactamente ese orden."
+            add_to_top: true
+            hint: "Aquí puedes agregar las promociones que aparecerán al tocar el botón Promociones. Abre cada promoción y usa el campo IMAGEN DE LA PROMOCIÓN para subir su diseño o fotografía."
             fields:
-              - { label: "FOTO / DISEÑO DE LA PROMOCIÓN", name: "imagen", widget: "image", required: false, hint: "Aquí puedes subir la imagen de la promoción del mes desde tu computadora. Recomendado: 1080×1350 px o 1080×1920 px, formato vertical." }
+              - { label: "IMAGEN DE LA PROMOCIÓN", name: "imagen", widget: "image", required: false, hint: "Pulsa Elegir una imagen para subir la promoción desde tu computadora. Recomendado: 1080×1350 px (4:5) o 1080×1920 px (9:16)." }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "text", required: false }
               - { label: "Texto del botón", name: "boton", widget: "string", required: false }
