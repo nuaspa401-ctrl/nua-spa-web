@@ -1,0 +1,17 @@
+NÜA SPA — PAQUETE UNIFICADO
+
+Base elegida: nua-spa-web-con-panel-corregido.zip
+Motivo: es la única de las tres versiones que incluye /admin, contenido/sitio.json, _redirects y configuración del panel.
+
+Se integró desde nua-spa-principal-con-fidelidad(1).zip:
+- Botón Tarjeta de fidelidad.
+- Sección visual de fidelidad.
+
+Se corrigió además:
+- Botón Promociones.
+- Sección Promociones real con id=promociones.
+- Footer colocado al final de la página.
+- Promociones y fidelidad editables desde el panel.
+- Respaldo JavaScript para navegación interna.
+
+El archivo nua-spa-web-con-panel.zip recibido estaba vacío (22 bytes), por lo que no contenía código aprovechable.
