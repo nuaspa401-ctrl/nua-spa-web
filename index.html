@@ -712,107 +712,143 @@
       }
     }
 
-    /* ── PROMOCIONES NÜA ── */
-    .promotions-section {
-      scroll-margin-top: 24px;
-      padding: 72px 20px;
-      background: linear-gradient(180deg, #f8fbfc 0%, #eef6f7 100%);
+    /* ── PROMOCIONES NÜA · VISTA TIPO GALERÍA ── */
+    body.promotions-open { overflow: hidden; }
+    .promotions-view {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      display: none;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background:
+        linear-gradient(90deg, #14b8b4 0%, #357ee8 52%, #7928e8 100%) top / 100% 7px no-repeat,
+        #f2f4f7;
       color: #17363a;
     }
-    .promotions-wrap {
-      width: min(1100px, 100%);
-      margin: 0 auto;
-    }
-    .promotions-head {
-      max-width: 720px;
-      margin: 0 auto 34px;
-      text-align: center;
-    }
-    .promotions-kicker {
-      display: inline-flex;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(44, 103, 109, .10);
-      color: #2c676d;
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .promotions-head h2 {
-      margin: 14px 0 10px;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.05;
-    }
-    .promotions-head p {
-      margin: 0 auto;
-      max-width: 620px;
-      color: #5a7376;
-      line-height: 1.7;
-    }
-    .promotions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-    }
-    .promo-card {
-      min-height: 275px;
-      padding: 26px;
-      border-radius: 26px;
-      background: rgba(255,255,255,.86);
-      border: 1px solid rgba(44,103,109,.12);
-      box-shadow: 0 18px 45px rgba(33,80,84,.08);
+    .promotions-view.open { display: block; }
+    .promotions-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      min-height: 70px;
+      padding: 18px 20px 12px;
       display: flex;
-      flex-direction: column;
-    }
-    .promo-card .promo-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: #2c676d;
-      color: #fff;
-      font-weight: 800;
-      margin-bottom: 22px;
-    }
-    .promo-card h3 {
-      margin: 0 0 10px;
-      font-size: 1.35rem;
-    }
-    .promo-card p {
-      margin: 0 0 22px;
-      color: #61797c;
-      line-height: 1.65;
-    }
-    .promo-card a {
-      margin-top: auto;
-      display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 11px 16px;
-      border-radius: 14px;
+      background: rgba(242,244,247,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .promotions-back {
+      position: absolute;
+      left: 18px;
+      top: 17px;
+      min-height: 40px;
+      padding: 8px 15px;
+      border: 1px solid rgba(44,103,109,.25);
+      border-radius: 999px;
+      background: rgba(255,255,255,.86);
+      color: #2c676d;
+      font: inherit;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .03em;
+      cursor: pointer;
+    }
+    .promotions-toolbar-title {
+      margin: 0;
+      font-size: .88rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #2c676d;
+    }
+    .promotions-gallery {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      padding: 16px 20px 58px;
+      display: grid;
+      justify-items: center;
+      gap: 26px;
+    }
+    .promo-slide {
+      width: min(430px, 92vw);
+      overflow: hidden;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(26,52,57,.14);
+      border: 1px solid rgba(44,103,109,.10);
+    }
+    .promo-slide-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 78vh;
+      object-fit: contain;
+      background: #fff;
+    }
+    .promo-slide-fallback {
+      min-height: 520px;
+      padding: 54px 34px 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(91,143,168,.20), transparent 33%),
+        linear-gradient(180deg, #fcfaf7, #eef4f5);
+    }
+    .promo-slide-fallback .promo-number {
+      margin: 0 auto 26px;
+      color: #5b8fa8;
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+    }
+    .promo-slide-fallback h3 {
+      margin: 0 0 14px;
+      color: #244f54;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2rem, 7vw, 3rem);
+      line-height: 1.08;
+      font-weight: 500;
+    }
+    .promo-slide-fallback p {
+      margin: 0 auto 28px;
+      max-width: 320px;
+      color: #61797c;
+      line-height: 1.7;
+    }
+    .promo-slide-link {
+      display: inline-flex;
+      align-self: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 18px;
+      border-radius: 999px;
       background: #2c676d;
       color: #fff;
       font-weight: 750;
       text-decoration: none;
     }
-    .promo-card a.secondary {
-      background: #e6f0f1;
-      color: #244f54;
-    }
-    .promotions-note {
-      margin: 22px auto 0;
-      max-width: 760px;
+    .promotions-empty {
+      width: min(430px, 92vw);
+      margin-top: 60px;
+      padding: 40px 28px;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(26,52,57,.10);
       text-align: center;
-      color: #6b8083;
-      font-size: .9rem;
+      color: #61797c;
     }
-    @media (max-width: 780px) {
-      .promotions-section { padding: 56px 16px; }
-      .promotions-grid { grid-template-columns: 1fr; }
-      .promo-card { min-height: 0; }
+    @media (max-width: 560px) {
+      .promotions-toolbar { justify-content: flex-end; padding-right: 18px; }
+      .promotions-toolbar-title { font-size: .72rem; }
+      .promotions-back { left: 12px; }
+      .promotions-gallery { padding-inline: 12px; }
+      .promo-slide { width: min(390px, 94vw); }
+      .promo-slide-fallback { min-height: 480px; padding-inline: 26px; }
     }
 
     .site-footer {
@@ -829,7 +865,7 @@
       text-align: center;
     }
 
-    #menu, #promociones, #fidelidad { scroll-margin-top: 24px; }
+    #menu, #fidelidad { scroll-margin-top: 24px; }
 
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head>
@@ -848,7 +884,7 @@
 <svg viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
       Menú
     </a>
-<a class="nav-btn" href="#promociones">
+<a class="nav-btn" href="#promociones" id="promotions-open" aria-controls="promociones" aria-expanded="false">
 <svg viewbox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"></path></svg>
       Promociones
     </a>
@@ -888,36 +924,13 @@
 
 </section>
 
-<!-- ══════════════ PROMOCIONES ══════════════ -->
-<section class="promotions-section" id="promociones">
-  <div class="promotions-wrap">
-    <div class="promotions-head">
-      <span class="promotions-kicker">Promociones Nüa</span>
-      <h2>Un motivo más para consentirte.</h2>
-      <p>Consulta las promociones, experiencias y beneficios disponibles. Las promociones activas pueden cambiar según temporada y disponibilidad.</p>
-    </div>
-    <div class="promotions-grid">
-      <article class="promo-card" data-promo-index="0">
-        <span class="promo-number">01</span>
-        <h3 class="promo-title">Promoción del mes</h3>
-        <p class="promo-text">Pregunta por la promoción vigente y descubre qué experiencia Nüa puedes aprovechar en tu próxima visita.</p>
-        <a class="promo-link" href="https://wa.me/527441054559?text=Hola%20N%C3%BCa%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes" rel="noopener noreferrer" target="_blank">Consultar por WhatsApp</a>
-      </article>
-      <article class="promo-card" data-promo-index="1">
-        <span class="promo-number">02</span>
-        <h3 class="promo-title">Beneficios de fidelidad</h3>
-        <p class="promo-text">Acumula tus visitas en tu tarjeta digital y desbloquea el beneficio correspondiente al completar tu ciclo.</p>
-        <a class="promo-link secondary" href="https://fidelidadnua.netlify.app/" rel="noopener" target="_blank">Ir a mi tarjeta</a>
-      </article>
-      <article class="promo-card" data-promo-index="2">
-        <span class="promo-number">03</span>
-        <h3 class="promo-title">Paquetes y experiencias</h3>
-        <p class="promo-text">Pregunta por combinaciones de servicios y experiencias personalizadas de acuerdo con lo que quieras trabajar o disfrutar.</p>
-        <a class="promo-link" href="https://wa.me/527441054559?text=Hola%20N%C3%BCa%2C%20quiero%20informaci%C3%B3n%20sobre%20paquetes%20y%20experiencias" rel="noopener noreferrer" target="_blank">Ver opciones</a>
-      </article>
-    </div>
-    <p class="promotions-note">Las promociones se pueden actualizar desde el panel sin tocar el código.</p>
+<!-- ══════════════ PROMOCIONES · VISTA TIPO GALERÍA ══════════════ -->
+<section class="promotions-view" id="promociones" aria-hidden="true" aria-label="Promociones Nüa">
+  <div class="promotions-toolbar">
+    <button class="promotions-back" id="promotions-close" type="button" aria-label="Regresar a la página principal">← Regresar</button>
+    <p class="promotions-toolbar-title">Promociones Nüa</p>
   </div>
+  <div class="promotions-gallery" id="promotions-gallery" aria-live="polite"></div>
 </section>
 
 <!-- ══════════════ FIDELIDAD ══════════════ -->
@@ -1190,50 +1203,111 @@
     }
 
     const promociones = Array.isArray(data.promociones) ? data.promociones : [];
-    const promotionsSection = document.getElementById('promociones');
-    const promotionsGrid = document.querySelector('.promotions-grid');
+    const promotionsView = document.getElementById('promociones');
+    const promotionsGallery = document.getElementById('promotions-gallery');
+    const promotionsOpen = document.getElementById('promotions-open');
+    const promotionsClose = document.getElementById('promotions-close');
     const promocionesVisibles = promociones.filter((promo) => promo && promo.visible !== false);
 
-    if (promotionsGrid) {
-      // El panel /admin controla por completo esta lista: crear, editar, ordenar,
-      // ocultar o eliminar promociones se refleja automáticamente en la portada.
-      promotionsGrid.replaceChildren();
+    if (promotionsGallery) {
+      promotionsGallery.replaceChildren();
+
+      if (promocionesVisibles.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'promotions-empty';
+        empty.textContent = 'Por el momento no hay promociones activas.';
+        promotionsGallery.appendChild(empty);
+      }
 
       promocionesVisibles.forEach((promo, index) => {
-        const card = document.createElement('article');
-        card.className = 'promo-card';
-        card.dataset.promoIndex = String(index);
+        const slide = document.createElement('article');
+        slide.className = 'promo-slide';
 
-        const number = document.createElement('span');
-        number.className = 'promo-number';
-        number.textContent = String(index + 1).padStart(2, '0');
+        if (promo.imagen) {
+          const img = document.createElement('img');
+          img.className = 'promo-slide-image';
+          img.src = promo.imagen;
+          img.alt = promo.titulo || `Promoción Nüa ${index + 1}`;
+          img.loading = index === 0 ? 'eager' : 'lazy';
+          slide.appendChild(img);
 
-        const title = document.createElement('h3');
-        title.className = 'promo-title';
-        title.textContent = promo.titulo || 'Promoción Nüa';
+          if (promo.enlace) {
+            const link = document.createElement('a');
+            link.className = 'promo-slide-link';
+            link.style.margin = '14px';
+            link.textContent = promo.boton || 'Consultar promoción';
+            link.href = promo.enlace;
+            if (!promo.enlace.startsWith('#')) {
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+            }
+            slide.appendChild(link);
+          }
+        } else {
+          const fallback = document.createElement('div');
+          fallback.className = 'promo-slide-fallback';
 
-        const text = document.createElement('p');
-        text.className = 'promo-text';
-        text.textContent = promo.descripcion || '';
+          const number = document.createElement('span');
+          number.className = 'promo-number';
+          number.textContent = `PROMOCIÓN ${String(index + 1).padStart(2, '0')}`;
 
-        const link = document.createElement('a');
-        link.className = 'promo-link';
-        link.textContent = promo.boton || 'Consultar';
-        link.href = promo.enlace || '#promociones';
+          const title = document.createElement('h3');
+          title.textContent = promo.titulo || 'Promoción Nüa';
 
-        if (promo.enlace && !promo.enlace.startsWith('#')) {
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
+          const text = document.createElement('p');
+          text.textContent = promo.descripcion || '';
+
+          fallback.append(number, title, text);
+
+          if (promo.enlace) {
+            const link = document.createElement('a');
+            link.className = 'promo-slide-link';
+            link.textContent = promo.boton || 'Consultar';
+            link.href = promo.enlace;
+            if (!promo.enlace.startsWith('#')) {
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+            }
+            fallback.appendChild(link);
+          }
+          slide.appendChild(fallback);
         }
 
-        card.append(number, title, text, link);
-        promotionsGrid.appendChild(card);
+        promotionsGallery.appendChild(slide);
       });
     }
 
-    if (promotionsSection) {
-      promotionsSection.hidden = promocionesVisibles.length === 0;
+    function openPromotions(event) {
+      if (event) event.preventDefault();
+      if (!promotionsView) return;
+      promotionsView.classList.add('open');
+      promotionsView.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('promotions-open');
+      if (promotionsOpen) promotionsOpen.setAttribute('aria-expanded', 'true');
+      promotionsView.scrollTop = 0;
+      if (history && history.replaceState) history.replaceState(null, '', '#promociones');
     }
+
+    function closePromotions() {
+      if (!promotionsView) return;
+      promotionsView.classList.remove('open');
+      promotionsView.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('promotions-open');
+      if (promotionsOpen) {
+        promotionsOpen.setAttribute('aria-expanded', 'false');
+        promotionsOpen.focus({ preventScroll: true });
+      }
+      if (history && history.replaceState && location.hash === '#promociones') {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+    }
+
+    if (promotionsOpen) promotionsOpen.addEventListener('click', openPromotions);
+    if (promotionsClose) promotionsClose.addEventListener('click', closePromotions);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && promotionsView && promotionsView.classList.contains('open')) closePromotions();
+    });
+    if (location.hash === '#promociones') openPromotions();
 
     const fidelidad = data.fidelidad || {};
     const fBadge = document.querySelector('[data-fidelity="badge"]');
