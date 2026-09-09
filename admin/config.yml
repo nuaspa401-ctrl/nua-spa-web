@@ -39,3 +39,25 @@ collections:
               - { label: "Precio", name: "precio", widget: "string", required: false }
               - { label: "Fotografía", name: "imagen", widget: "image" }
               - { label: "Mostrar servicio", name: "visible", widget: "boolean", default: true }
+
+          - label: "Promociones"
+            name: "promociones"
+            widget: "list"
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Texto del botón", name: "boton", widget: "string" }
+              - { label: "Enlace del botón", name: "enlace", widget: "string" }
+              - { label: "Mostrar promoción", name: "visible", widget: "boolean", default: true }
+
+          - label: "Programa de fidelidad"
+            name: "fidelidad"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "badge", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Texto del botón", name: "boton", widget: "string" }
+              - { label: "Enlace de la tarjeta", name: "enlace", widget: "string" }
+

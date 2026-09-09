@@ -1,20 +1,20 @@
 {
   "sitio": {
-    "imagen_fondo": "",
-    "facebook": "",
     "nombre": "Nüa Spa",
     "logo": "assets/logo/nua-logo-azul.png",
-    "whatsapp": "",
-    "color_principal": "#5b8fa8",
-    "instagram": "",
+    "imagen_fondo": "",
     "color_fondo": "#f3efe8",
-    "texto_bienvenida": "Bienvenida a Nüa Spa"
+    "color_principal": "#5b8fa8",
+    "texto_bienvenida": "Bienvenida a Nüa Spa",
+    "whatsapp": "",
+    "instagram": "",
+    "facebook": ""
   },
   "servicios": [
     {
       "nombre": "Facial Esencial",
       "duracion": "50 – 60 min",
-      "precio": "$700",
+      "precio": "$550",
       "imagen": "assets/servicios/facial-esencial.png",
       "visible": true
     },
@@ -249,5 +249,35 @@
       "imagen": "assets/servicios/experiencia-nua.png",
       "visible": true
     }
-  ]
+  ],
+  "promociones": [
+    {
+      "titulo": "Promoción del mes",
+      "descripcion": "Pregunta por la promoción vigente y descubre qué experiencia Nüa puedes aprovechar en tu próxima visita.",
+      "boton": "Consultar por WhatsApp",
+      "enlace": "https://wa.me/527441054559?text=Hola%20N%C3%BCa%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes",
+      "visible": true
+    },
+    {
+      "titulo": "Beneficios de fidelidad",
+      "descripcion": "Acumula tus visitas en tu tarjeta digital y desbloquea el beneficio correspondiente al completar tu ciclo.",
+      "boton": "Ir a mi tarjeta",
+      "enlace": "https://fidelidadnua.netlify.app/",
+      "visible": true
+    },
+    {
+      "titulo": "Paquetes y experiencias",
+      "descripcion": "Pregunta por combinaciones de servicios y experiencias personalizadas de acuerdo con lo que quieras trabajar o disfrutar.",
+      "boton": "Ver opciones",
+      "enlace": "https://wa.me/527441054559?text=Hola%20N%C3%BCa%2C%20quiero%20informaci%C3%B3n%20sobre%20paquetes%20y%20experiencias",
+      "visible": true
+    }
+  ],
+  "fidelidad": {
+    "badge": "Programa de fidelidad Nüa",
+    "titulo": "Cinco visitas. Un beneficio especial.",
+    "descripcion": "Crea tu tarjeta digital, registra cada visita y recibe un beneficio especial al completar cinco visitas.",
+    "boton": "Crear mi tarjeta digital",
+    "enlace": "https://fidelidadnua.netlify.app/"
+  }
 }

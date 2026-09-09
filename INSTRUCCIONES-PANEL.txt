@@ -1,15 +1,26 @@
-NÜA SPA — PANEL DE EDICIÓN
+NÜA SPA — VERSIÓN DEFINITIVA ESTÁTICA + PANEL
 
-Este paquete agrega:
-- /admin para editar el sitio.
-- Cambio de logo.
-- Cambio de imagen y color de fondo.
-- Edición de fotografías, nombres, precios y duración de servicios.
-- Opción para mostrar u ocultar servicios.
-- Guardado en GitHub y publicación automática mediante Netlify.
+Este paquete une las mejores partes de las versiones recibidas:
+- Página principal.
+- Menú de servicios.
+- Sección Promociones (botón corregido).
+- Programa / botón de fidelidad.
+- Panel /admin con Decap CMS.
+- Edición de logo, fondo, colores, servicios, promociones y fidelidad.
 
-Después de subir estos archivos a GitHub:
-1. En Netlify activa Identity.
-2. Activa Git Gateway.
-3. Invita a la persona encargada.
-4. Entra a https://nuaoficcial.netlify.app/admin/
+IMPORTANTE PARA EL PANEL:
+1. Sube este proyecto a un repositorio de GitHub.
+2. Conecta el repositorio con Netlify.
+3. En Netlify activa Identity.
+4. Activa Git Gateway.
+5. Invita a la persona encargada.
+6. Entra a https://nuaoficcial.netlify.app/admin/
+
+Si solo haces un deploy manual, la página puede mostrarse, pero el panel no podrá guardar cambios en GitHub hasta que Identity + Git Gateway estén configurados.
+
+PROMOCIONES:
+El botón Promociones apunta a #promociones y además tiene respaldo JavaScript de desplazamiento.
+Las promociones se modifican desde /admin sin editar index.html.
+
+FIDELIDAD:
+El enlace actual es https://fidelidadnua.netlify.app/ y también puede editarse desde el panel.

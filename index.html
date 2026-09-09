@@ -526,6 +526,311 @@
         animation: none;
       }
     }
+
+
+    .fidelity-link {
+      border-color: rgba(255,255,255,.88);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.80), rgba(191,214,225,.46));
+      color: var(--nua-dark);
+      font-weight: 600;
+    }
+
+    .fidelity-link:hover,
+    .fidelity-link:focus-visible {
+      background: rgba(255,255,255,.96);
+      color: var(--nua-dark);
+    }
+
+    .fidelity-section {
+      position: relative;
+      padding: clamp(4rem, 9vw, 7rem) 1.25rem;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(191,214,225,.65), transparent 28rem),
+        radial-gradient(circle at 88% 82%, rgba(166,138,100,.20), transparent 24rem),
+        var(--cream);
+    }
+
+    .fidelity-section::before,
+    .fidelity-section::after {
+      content: "";
+      position: absolute;
+      width: min(52vw, 540px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      filter: blur(65px);
+      opacity: .32;
+      pointer-events: none;
+    }
+
+    .fidelity-section::before {
+      left: -18%;
+      top: -36%;
+      background: var(--nua-light);
+    }
+
+    .fidelity-section::after {
+      right: -17%;
+      bottom: -42%;
+      background: var(--gold);
+    }
+
+    .fidelity-card {
+      position: relative;
+      z-index: 1;
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: clamp(2rem, 6vw, 4.6rem);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.82);
+      border-radius: clamp(30px, 5vw, 52px);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.84), rgba(255,255,255,.52));
+      box-shadow:
+        0 30px 85px rgba(61,100,120,.16),
+        inset 0 1px 0 rgba(255,255,255,.98);
+      -webkit-backdrop-filter: blur(24px) saturate(145%);
+      backdrop-filter: blur(24px) saturate(145%);
+    }
+
+    .fidelity-badge {
+      display: inline-flex;
+      padding: .5rem .9rem;
+      border-radius: 999px;
+      color: var(--nua-dark);
+      background: rgba(91,143,168,.12);
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .fidelity-card h2 {
+      max-width: 760px;
+      margin: 1.2rem auto .9rem;
+      color: var(--nua-dark);
+      font-size: clamp(2.15rem, 5vw, 4.1rem);
+      line-height: 1.04;
+    }
+
+    .fidelity-card > p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #66757c;
+      font-size: clamp(.98rem, 2vw, 1.12rem);
+      line-height: 1.75;
+    }
+
+    .fidelity-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: clamp(2rem, 5vw, 3.2rem) 0;
+    }
+
+    .fidelity-step {
+      display: flex;
+      min-height: 190px;
+      padding: 1.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      border: 1px solid rgba(91,143,168,.13);
+      border-radius: 24px;
+      background: rgba(255,255,255,.66);
+      box-shadow: 0 12px 34px rgba(61,100,120,.08);
+      transition:
+        transform .6s cubic-bezier(.22,1,.36,1),
+        box-shadow .6s cubic-bezier(.22,1,.36,1);
+    }
+
+    .fidelity-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(61,100,120,.14);
+    }
+
+    .fidelity-step > span {
+      margin-bottom: auto;
+      color: var(--gold);
+      font-family: "Marcellus", serif;
+      font-size: 1.45rem;
+    }
+
+    .fidelity-step strong {
+      margin-top: 2rem;
+      color: var(--nua-dark);
+      font-family: "Marcellus", serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .fidelity-step small {
+      margin-top: .5rem;
+      color: #718087;
+      line-height: 1.5;
+    }
+
+    .fidelity-button {
+      display: inline-flex;
+      min-height: 54px;
+      padding: 0 1.7rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      color: white;
+      background: linear-gradient(135deg, var(--nua-dark), var(--nua-blue));
+      box-shadow: 0 15px 34px rgba(61,100,120,.24);
+      font-weight: 600;
+      text-decoration: none;
+      transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        box-shadow .45s cubic-bezier(.22,1,.36,1);
+    }
+
+    .fidelity-button:hover,
+    .fidelity-button:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 44px rgba(61,100,120,.30);
+    }
+
+    @media (max-width: 760px) {
+      .fidelity-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .fidelity-step {
+        min-height: 155px;
+      }
+
+      .fidelity-step strong {
+        margin-top: 1.4rem;
+      }
+
+      .fidelity-button {
+        width: 100%;
+      }
+    }
+
+    /* ── PROMOCIONES NÜA ── */
+    .promotions-section {
+      scroll-margin-top: 24px;
+      padding: 72px 20px;
+      background: linear-gradient(180deg, #f8fbfc 0%, #eef6f7 100%);
+      color: #17363a;
+    }
+    .promotions-wrap {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+    }
+    .promotions-head {
+      max-width: 720px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+    .promotions-kicker {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(44, 103, 109, .10);
+      color: #2c676d;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .promotions-head h2 {
+      margin: 14px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+    }
+    .promotions-head p {
+      margin: 0 auto;
+      max-width: 620px;
+      color: #5a7376;
+      line-height: 1.7;
+    }
+    .promotions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .promo-card {
+      min-height: 275px;
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(44,103,109,.12);
+      box-shadow: 0 18px 45px rgba(33,80,84,.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .promo-card .promo-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #2c676d;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+    .promo-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+    }
+    .promo-card p {
+      margin: 0 0 22px;
+      color: #61797c;
+      line-height: 1.65;
+    }
+    .promo-card a {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 11px 16px;
+      border-radius: 14px;
+      background: #2c676d;
+      color: #fff;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .promo-card a.secondary {
+      background: #e6f0f1;
+      color: #244f54;
+    }
+    .promotions-note {
+      margin: 22px auto 0;
+      max-width: 760px;
+      text-align: center;
+      color: #6b8083;
+      font-size: .9rem;
+    }
+    @media (max-width: 780px) {
+      .promotions-section { padding: 56px 16px; }
+      .promotions-grid { grid-template-columns: 1fr; }
+      .promo-card { min-height: 0; }
+    }
+
+    .site-footer {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      padding: 2rem 1rem 2.5rem;
+      background: #edf3f4;
+      border-top: 1px solid rgba(44,103,109,.10);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--nua-dark);
+      opacity: .78;
+      text-align: center;
+    }
+
+    #menu, #promociones, #fidelidad { scroll-margin-top: 24px; }
+
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head>
 <body>
@@ -570,6 +875,7 @@
 <svg viewbox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
       Contáctanos
     </a>
+<a class="nav-btn fidelity-link" data-fidelity="nav-link" href="https://fidelidadnua.netlify.app/" rel="noopener" target="_blank">Tarjeta de fidelidad</a>
 </nav>
 <script>
     var socialToggle = document.getElementById('social-toggle');
@@ -579,8 +885,56 @@
       socialToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   </script>
-<footer>© 2026 Nüa Spa · Todos los derechos reservados</footer>
+
 </section>
+
+<!-- ══════════════ PROMOCIONES ══════════════ -->
+<section class="promotions-section" id="promociones">
+  <div class="promotions-wrap">
+    <div class="promotions-head">
+      <span class="promotions-kicker">Promociones Nüa</span>
+      <h2>Un motivo más para consentirte.</h2>
+      <p>Consulta las promociones, experiencias y beneficios disponibles. Las promociones activas pueden cambiar según temporada y disponibilidad.</p>
+    </div>
+    <div class="promotions-grid">
+      <article class="promo-card" data-promo-index="0">
+        <span class="promo-number">01</span>
+        <h3 class="promo-title">Promoción del mes</h3>
+        <p class="promo-text">Pregunta por la promoción vigente y descubre qué experiencia Nüa puedes aprovechar en tu próxima visita.</p>
+        <a class="promo-link" href="https://wa.me/527441054559?text=Hola%20N%C3%BCa%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes" rel="noopener noreferrer" target="_blank">Consultar por WhatsApp</a>
+      </article>
+      <article class="promo-card" data-promo-index="1">
+        <span class="promo-number">02</span>
+        <h3 class="promo-title">Beneficios de fidelidad</h3>
+        <p class="promo-text">Acumula tus visitas en tu tarjeta digital y desbloquea el beneficio correspondiente al completar tu ciclo.</p>
+        <a class="promo-link secondary" href="https://fidelidadnua.netlify.app/" rel="noopener" target="_blank">Ir a mi tarjeta</a>
+      </article>
+      <article class="promo-card" data-promo-index="2">
+        <span class="promo-number">03</span>
+        <h3 class="promo-title">Paquetes y experiencias</h3>
+        <p class="promo-text">Pregunta por combinaciones de servicios y experiencias personalizadas de acuerdo con lo que quieras trabajar o disfrutar.</p>
+        <a class="promo-link" href="https://wa.me/527441054559?text=Hola%20N%C3%BCa%2C%20quiero%20informaci%C3%B3n%20sobre%20paquetes%20y%20experiencias" rel="noopener noreferrer" target="_blank">Ver opciones</a>
+      </article>
+    </div>
+    <p class="promotions-note">Las promociones se pueden actualizar desde el panel sin tocar el código.</p>
+  </div>
+</section>
+
+<!-- ══════════════ FIDELIDAD ══════════════ -->
+<section class="fidelity-section" id="fidelidad">
+  <div class="fidelity-card">
+    <span class="fidelity-badge" data-fidelity="badge">Programa de fidelidad Nüa</span>
+    <h2 data-fidelity="titulo">Cinco visitas. Un beneficio especial.</h2>
+    <p data-fidelity="descripcion">Crea tu tarjeta digital, registra cada visita y recibe un beneficio especial al completar cinco visitas.</p>
+    <div class="fidelity-steps">
+      <div class="fidelity-step"><span>01</span><strong>Regístrate</strong><small>Crea tu tarjeta digital con tus datos.</small></div>
+      <div class="fidelity-step"><span>02</span><strong>Acumula visitas</strong><small>La encargada registra cada visita en tu historial.</small></div>
+      <div class="fidelity-step"><span>03</span><strong>Recibe tu premio</strong><small>Al llegar a cinco visitas se activa tu beneficio.</small></div>
+    </div>
+    <a class="fidelity-button" data-fidelity="boton" href="https://fidelidadnua.netlify.app/" rel="noopener" target="_blank">Crear mi tarjeta digital</a>
+  </div>
+</section>
+
 <!-- ══════════════ MENÚ ══════════════ -->
 <section class="menu-section" id="menu">
 <div class="menu-header">
@@ -778,6 +1132,7 @@
   </p>
 <a class="back-to-top" href="#inicio">Volver al inicio</a>
 </section>
+<footer class="site-footer">© 2026 Nüa Spa · Todos los derechos reservados</footer>
 <!-- LIGHTBOX -->
 <div aria-label="Vista del servicio" aria-modal="true" id="lightbox-overlay" role="dialog">
 <img alt="" id="lightbox-img" src=""/>
@@ -834,6 +1189,67 @@
       hero.style.backgroundPosition = 'center';
     }
 
+    const promociones = Array.isArray(data.promociones) ? data.promociones : [];
+    const promotionsSection = document.getElementById('promociones');
+    const promotionsGrid = document.querySelector('.promotions-grid');
+    const promocionesVisibles = promociones.filter((promo) => promo && promo.visible !== false);
+
+    if (promotionsGrid) {
+      // El panel /admin controla por completo esta lista: crear, editar, ordenar,
+      // ocultar o eliminar promociones se refleja automáticamente en la portada.
+      promotionsGrid.replaceChildren();
+
+      promocionesVisibles.forEach((promo, index) => {
+        const card = document.createElement('article');
+        card.className = 'promo-card';
+        card.dataset.promoIndex = String(index);
+
+        const number = document.createElement('span');
+        number.className = 'promo-number';
+        number.textContent = String(index + 1).padStart(2, '0');
+
+        const title = document.createElement('h3');
+        title.className = 'promo-title';
+        title.textContent = promo.titulo || 'Promoción Nüa';
+
+        const text = document.createElement('p');
+        text.className = 'promo-text';
+        text.textContent = promo.descripcion || '';
+
+        const link = document.createElement('a');
+        link.className = 'promo-link';
+        link.textContent = promo.boton || 'Consultar';
+        link.href = promo.enlace || '#promociones';
+
+        if (promo.enlace && !promo.enlace.startsWith('#')) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
+
+        card.append(number, title, text, link);
+        promotionsGrid.appendChild(card);
+      });
+    }
+
+    if (promotionsSection) {
+      promotionsSection.hidden = promocionesVisibles.length === 0;
+    }
+
+    const fidelidad = data.fidelidad || {};
+    const fBadge = document.querySelector('[data-fidelity="badge"]');
+    const fTitle = document.querySelector('[data-fidelity="titulo"]');
+    const fDesc = document.querySelector('[data-fidelity="descripcion"]');
+    const fButton = document.querySelector('[data-fidelity="boton"]');
+    const fNav = document.querySelector('[data-fidelity="nav-link"]');
+    if (fBadge && fidelidad.badge) fBadge.textContent = fidelidad.badge;
+    if (fTitle && fidelidad.titulo) fTitle.textContent = fidelidad.titulo;
+    if (fDesc && fidelidad.descripcion) fDesc.textContent = fidelidad.descripcion;
+    if (fButton) {
+      if (fidelidad.boton) fButton.textContent = fidelidad.boton;
+      if (fidelidad.enlace) fButton.href = fidelidad.enlace;
+    }
+    if (fNav && fidelidad.enlace) fNav.href = fidelidad.enlace;
+
     const servicios = Array.isArray(data.servicios) ? data.servicios : [];
     document.querySelectorAll('.service-card').forEach((card, index) => {
       const servicio = servicios[index];
@@ -879,5 +1295,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      const href = link.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (history.replaceState) history.replaceState(null, '', href);
+    });
+  });
+});
+</script>
+
 </body>
 </html>
